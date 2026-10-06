@@ -1,0 +1,118 @@
+apkpemilihanosisnurul/
+│
+├── index.php                 # halaman homepage selamat datang (pakai navbar yang ada menu loginuser dan loginuser)
+│
+├── assets/
+│   ├── js/
+│   ├── css/
+│   ├── plugins/
+│   └── images/
+│       ├── slider/
+│       ├── kandidat/
+│       └── user/
+│  
+├── views/
+│   │
+│   ├── component/ 
+│   │   ├── tamu/
+│   │   │   ├── navbar.php    =>  pakai navbar yang ada menu loginuser dan loginuser
+│   │   │   └── footer.php
+│   │   ├── user/
+│   │   │   ├── navbar.php    =>  pakai navbar yang ada foto, role, namauser, menu logoutnya
+│   │   │   ├── sidebaradmin.php    => sesuai usecase seluruh fitur bisa diakses
+│   │   │   ├── sidebarpetugas.php     => tidak boleh ada menu user, bahkan tidak boleh diakses langsung dengan mengetik di url
+│   │   │   └── footer.php
+│   │   └── siswa/
+│   │       ├── navbar.php     =>  pakai navbar yang ada foto, role, namapelanggan, menu logoutnya
+│   │       ├── sidebar.php
+│   │       └── footer.php
+│   │   └── guru/
+│   │       ├── navbar.php     =>  pakai navbar yang ada foto, role, namapelanggan, menu logoutnya
+│   │       ├── sidebar.php
+│   │       └── footer.php
+│   │
+│   ├── user/   ← (ADMIN & PETUGAS)
+│   │   ├── dashboard/
+│   │   │   ├── dashboardadmin.php
+│   │   │   └── dashboardpetugas.php
+│   │   ├── user/
+│   │   │   ├── index.php
+│   │   │   ├── create.php
+│   │   │   ├── edit.php
+│   │   │   └── show.php
+│   │   ├── siswa/
+│   │   │   ├── index.php
+│   │   │   ├── create.php
+│   │   │   ├── edit.php
+│   │   │   └── show.php
+│   │   ├── guru/
+│   │   │   ├── index.php
+│   │   │   ├── create.php
+│   │   │   ├── edit.php
+│   │   │   └── show.php
+│   │   ├── kandidat/
+│   │   │   ├── index.php
+│   │   │   ├── create.php
+│   │   │   ├── edit.php
+│   │   │   └── show.php
+│   │   ├── kategori/
+│   │   │   ├── index.php
+│   │   │   ├── create.php
+│   │   │   ├── edit.php
+│   │   │   └── show.php
+│   │   ├── pemilihan/
+│   │   │   ├── index.php
+│   │   │   ├── create.php
+│   │   │   ├── edit.php
+│   │   │   └── show.php
+│   │   └── detailpemilihan/
+│   │       ├── index.php
+│   │       ├── create.php
+│   │       ├── edit.php
+│   │       └── show.php
+│   │
+│   ├── siswa/   ← (LOGIN siswa)
+│   │   └── dashboardpemilih.php  ( Siswa dan guru memiliki halaman login yang berbeda,
+        tetapi setelah berhasil login keduanya masuk ke dashboard yang sama.
+        Dashboard menampilkan fitur pemilihan sesuai pengguna yang sedang login.)
+│   │     
+│   │     
+│   ├── guru/   ← (LOGIN guru)
+│   │   └── dashboardpemilih.php  (Dashboard bersama yang digunakan oleh siswa dan guru.
+        Siswa dan guru memiliki halaman login yang berbeda,
+        tetapi setelah berhasil login keduanya masuk ke dashboard yang sama.
+        Dashboard menampilkan fitur pemilihan sesuai pengguna yang sedang login.)
+│   │     
+│   │     
+│   ├── landing/   ← (PUBLIC)
+│   │   ├── home.php (halaman default paling depan berisi seluruh konten standar homepage semantic dinamis modern minimalis dan responsif ada cuplikan dan ringkasan informasi dan etalase spoiler standar home web penjualan profesional)
+│   │   ├── kandidat.php (Menampilkan seluruh daftar kandidat yang mengikuti pemilihan OSIS. Data kandidat diambil dari tabel kandidat)
+│   │   ├── detailkandidat.php (Menampilkan informasi lengkap mengenai kandidat yang dipilih)
+│   │   ├── kategori.php (halaman yang ada di navbar menu daftar kategori berisi seluruh kategori yang bisa menampilkan konten sesuai kategori yang diklik)
+│   │   ├── detilkategori.php (Menampilkan detail kategori yang dipilih, beserta kandidat yang termasuk dalam kategori tersebut.)
+│   │   ├── tentang.php (halaman yang muncul ketika klik navbar menu tentang)
+│   │   └── kontak.php (halaman yang muncul ketika klik navbar menu kontak)
+│   │   
+│   │
+│   ├── auth/   
+│   │   ├── loginuser.php
+│   │   ├── loginsiswa.php
+│   │   ├── loginguru.php
+│   │   └── logout.php     
+│   │
+│   └── errors/   ← (GLOBAL ERROR HANDLER)
+│       ├── 404.php
+│       ├── 403.php
+│       └── 500.php
+│
+└── proses/
+   ├── koneksi.php
+   ├── session.php
+   ├── prosesuser.php
+   ├── prosessiswa.php
+   ├── prosesguru.php
+   ├── proseskandidat.php
+   ├── proseskategori.php
+   ├── prosespemilihan.php
+   └── prosesdetailpemilihan.php
+   
